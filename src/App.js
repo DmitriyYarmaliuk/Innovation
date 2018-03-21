@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch, withRouter } from 'react-router-dom';
 
+// our Zillow Web Services Identification (ZWSID) is: X1-ZWz18phlr8s9vv_a6mew
+
+//let Zillow = require('node-zillow');
+
+// const zwsid = 'X1-ZWz18phlr8s9vv_a6mew'
+// var zillow = new Zillow(zwsid)
+
+// var parameters = {
+//   zpid: 1111111
+// };
+
+// let output = zillow.get('GetZestimate', parameters)
+//   .then(function(results) {
+//     return results;
+//     // results here is an object { message: {}, request: {}, response: {}} 
+//   })
+
+
+
 class App extends Component {
   constructor() {
     super();
@@ -28,7 +47,7 @@ class App extends Component {
   }
 
   render() {
-    const items = ["Google", "Yahoo", "Yandex", "DuckDuckGo"];
+    const items = ["Projected Plan", "Course of Actions"];
     const {location} = this.props;
     
     return (
@@ -37,8 +56,8 @@ class App extends Component {
           <h1 className="App-title">Example</h1>
         </header>
         <div className="navMenu" ref={el => this.link = el}>
-          <Link className="create-link" to="/create" onClick={this.handleCreate} >Create</Link>
-          <Link className="list-link" to="/list" onClick={this.handleList} >View List</Link>
+          <Link className="create-link" to="/create" onClick={this.handleCreate} >Create Plan</Link>
+          <Link className="list-link" to="/list" onClick={this.handleList} >View Options</Link>
         </div>
         <Switch location={location}>
           <Route exact={true} path="/" />
