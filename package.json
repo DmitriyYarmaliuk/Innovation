@@ -3,9 +3,10 @@
   "description": null,
   "version": "0.0.16",
   "dependencies": {
-    "react-router-dom": "4.2.2",
+    "node-zillow": "^1.0.1",
+    "react": "16.0.0",
     "react-dom": "16.0.0",
-    "react": "16.0.0"
+    "react-router-dom": "4.2.2"
   },
   "devDependencies": {
     "react-scripts": "1.0.0"
